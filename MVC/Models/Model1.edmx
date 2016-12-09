@@ -1,0 +1,626 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="TESTModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'TEST.dbo.ordc_bah1' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="ordc_bah1">
+          <Key>
+            <PropertyRef Name="site" />
+            <PropertyRef Name="ord_nbr" />
+          </Key>
+          <Property Name="site" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="ord_nbr" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ord_date" Type="datetime" />
+          <Property Name="ord_class" Type="nvarchar" MaxLength="1" />
+          <Property Name="cus_id" Type="nvarchar" MaxLength="8" />
+          <Property Name="dept_no" Type="nvarchar" MaxLength="6" />
+          <Property Name="item_no" Type="nvarchar" MaxLength="38" />
+          <Property Name="item_name" Type="nvarchar" MaxLength="100" />
+          <Property Name="cus_item_no" Type="nvarchar" MaxLength="100" />
+          <Property Name="item_statistic" Type="nvarchar" MaxLength="8" />
+          <Property Name="item_type" Type="nvarchar" MaxLength="4" />
+          <Property Name="salesman" Type="nvarchar" MaxLength="8" />
+          <Property Name="unit_price" Type="numeric" Precision="15" Scale="5" />
+          <Property Name="ord_qty" Type="numeric" Precision="11" Scale="3" />
+          <Property Name="manual_qty" Type="numeric" Precision="11" Scale="3" />
+          <Property Name="ord_unit" Type="nvarchar" MaxLength="4" />
+          <Property Name="aux_qty" Type="numeric" Precision="11" Scale="3" />
+          <Property Name="aux_unit" Type="nvarchar" MaxLength="4" />
+          <Property Name="season_y" Type="nvarchar" MaxLength="4" />
+          <Property Name="season" Type="nvarchar" MaxLength="20" />
+          <Property Name="plan_fin_date" Type="datetime" />
+          <Property Name="vendor_id" Type="nvarchar" MaxLength="8" />
+          <Property Name="sam_nbr" Type="nvarchar" MaxLength="20" />
+          <Property Name="sam_times" Type="nvarchar" MaxLength="2" />
+          <Property Name="expand_yn" Type="nvarchar" MaxLength="1" />
+          <Property Name="agents" Type="nvarchar" MaxLength="8" />
+          <Property Name="estimate_ie" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="actual_ie" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="approved_ie" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="trademark" Type="nvarchar" MaxLength="80" />
+          <Property Name="brand" Type="nvarchar" MaxLength="30" />
+          <Property Name="ingredients" Type="nvarchar" MaxLength="100" />
+          <Property Name="adv_amt" Type="numeric" Precision="12" Scale="3" />
+          <Property Name="bah_status" Type="nvarchar" MaxLength="2" />
+          <Property Name="crp_yn" Type="nvarchar" MaxLength="1" />
+          <Property Name="close_reason" Type="nvarchar" MaxLength="1" />
+          <Property Name="close_rmk" Type="nvarchar" MaxLength="40" />
+          <Property Name="filter_dept" Type="nvarchar" MaxLength="6" />
+          <Property Name="filter_creator" Type="nvarchar" MaxLength="12" />
+          <Property Name="creator" Type="nvarchar" MaxLength="12" />
+          <Property Name="create_date" Type="datetime" />
+          <Property Name="modifier" Type="nvarchar" MaxLength="12" />
+          <Property Name="modify_date" Type="datetime" />
+          <Property Name="est_gross_pcs" Type="numeric" Precision="11" Scale="2" />
+          <Property Name="real_gross_pcs" Type="numeric" Precision="11" Scale="2" />
+          <Property Name="expense_dozen" Type="numeric" Precision="11" Scale="2" />
+          <Property Name="main_cost" Type="numeric" Precision="11" Scale="2" />
+          <Property Name="sub_cost" Type="numeric" Precision="11" Scale="2" />
+          <Property Name="extra_expense" Type="numeric" Precision="11" Scale="2" />
+          <Property Name="ord_closer" Type="nvarchar" MaxLength="12" />
+          <Property Name="close_date" Type="datetime" />
+          <Property Name="crp_date" Type="datetime" />
+          <Property Name="mps_yn" Type="nvarchar" MaxLength="1" />
+          <Property Name="mps_date" Type="datetime" />
+          <Property Name="sub_yn" Type="nvarchar" MaxLength="1" />
+          <Property Name="sub_date" Type="datetime" />
+          <Property Name="prod_nbr" Type="nvarchar" MaxLength="20" />
+          <Property Name="price_main_yn" Type="nvarchar" MaxLength="1" />
+          <Property Name="price_sub_yn" Type="nvarchar" MaxLength="1" />
+          <Property Name="rough_gross" Type="numeric" Precision="11" Scale="2" />
+          <Property Name="chn_yn" Type="nvarchar" MaxLength="1" />
+          <Property Name="chn_date" Type="datetime" />
+          <Property Name="chn_turn_out" Type="nvarchar" MaxLength="1" />
+          <Property Name="chn_turn_date" Type="datetime" />
+          <Property Name="pre_nbr" Type="nvarchar" MaxLength="20" />
+          <Property Name="pre_seq" Type="nvarchar" MaxLength="4" />
+        </EntityType>
+        <!--產生期間發現錯誤:
+警告 6002: 資料表/檢視 'TEST.dbo.ordc_bat' 未定義主索引鍵。已推斷此索引鍵，並將定義建立成唯讀的資料表/檢視。-->
+        <EntityType Name="ordc_bat">
+          <Key>
+            <PropertyRef Name="site" />
+            <PropertyRef Name="ord_nbr" />
+            <PropertyRef Name="ord_seq" />
+          </Key>
+          <Property Name="site" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="ord_nbr" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="ord_seq" Type="nvarchar" MaxLength="4" Nullable="false" />
+          <Property Name="cust_po_nbr" Type="nvarchar" MaxLength="20" />
+          <Property Name="season" Type="nvarchar" MaxLength="12" />
+          <Property Name="item_number" Type="nvarchar" MaxLength="4" />
+          <Property Name="hts" Type="nvarchar" MaxLength="20" />
+          <Property Name="pack" Type="nvarchar" MaxLength="40" />
+          <Property Name="sample_class" Type="nvarchar" MaxLength="10" />
+          <Property Name="get_term" Type="nvarchar" MaxLength="6" />
+          <Property Name="transatn_term" Type="nvarchar" MaxLength="6" />
+          <Property Name="last_place" Type="nvarchar" MaxLength="30" />
+          <Property Name="deliver_id" Type="nvarchar" MaxLength="4" />
+          <Property Name="forwarder" Type="nvarchar" MaxLength="30" />
+          <Property Name="quota_id" Type="nvarchar" MaxLength="60" />
+          <Property Name="unit_price" Type="numeric" Precision="15" Scale="5" />
+          <Property Name="pre_qty" Type="numeric" Precision="11" Scale="3" />
+          <Property Name="real_price" Type="numeric" Precision="15" Scale="5" />
+          <Property Name="add_reduce_item" Type="numeric" Precision="12" Scale="4" />
+          <Property Name="real_qty" Type="numeric" Precision="11" Scale="3" />
+          <Property Name="ord_amt" Type="numeric" Precision="12" Scale="2" />
+          <Property Name="ord_base_amt" Type="numeric" Precision="12" Scale="2" />
+          <Property Name="shp_qty" Type="numeric" Precision="11" Scale="3" />
+          <Property Name="shp_amt" Type="numeric" Precision="12" Scale="2" />
+          <Property Name="rtn_qty" Type="numeric" Precision="11" Scale="3" />
+          <Property Name="rtn_amt" Type="numeric" Precision="12" Scale="2" />
+          <Property Name="wpk_qty" Type="numeric" Precision="11" Scale="3" />
+          <Property Name="shp_time" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="add_export" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="reduce_export" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="cus_brokerage" Type="numeric" Precision="5" Scale="2" />
+          <Property Name="cus_delivery_range" Type="nvarchar" MaxLength="20" />
+          <Property Name="cus_delivery_s" Type="datetime" />
+          <Property Name="cus_delivery_e" Type="datetime" />
+          <Property Name="finish_modify_date" Type="datetime" />
+          <Property Name="qty_modify_date" Type="datetime" />
+          <Property Name="cancel_yn" Type="nvarchar" MaxLength="1" />
+          <Property Name="cancel_date" Type="datetime" />
+          <Property Name="plan_fin_date" Type="datetime" />
+          <Property Name="finish_date" Type="datetime" />
+          <Property Name="last_date" Type="datetime" />
+          <Property Name="confirm_date" Type="datetime" />
+          <Property Name="color_price_yn" Type="nvarchar" MaxLength="1" />
+          <Property Name="bat_status" Type="nvarchar" MaxLength="2" />
+          <Property Name="close_date" Type="datetime" />
+          <Property Name="reason" Type="nvarchar" MaxLength="15" />
+          <Property Name="filter_creator" Type="nvarchar" MaxLength="12" />
+          <Property Name="filter_dept" Type="nvarchar" MaxLength="6" />
+          <Property Name="creator" Type="nvarchar" MaxLength="12" />
+          <Property Name="create_date" Type="datetime" />
+          <Property Name="modifier" Type="nvarchar" MaxLength="12" />
+          <Property Name="modify_date" Type="datetime" />
+          <Property Name="po_type" Type="nvarchar" MaxLength="20" />
+          <Property Name="est_gross_pcs" Type="numeric" Precision="11" Scale="2" />
+          <Property Name="real_gross_pcs" Type="numeric" Precision="11" Scale="2" />
+          <Property Name="main_cost" Type="numeric" Precision="11" Scale="2" />
+          <Property Name="sub_cost" Type="numeric" Precision="11" Scale="2" />
+          <Property Name="first_shp_date" Type="datetime" />
+          <Property Name="last_shp_date" Type="datetime" />
+          <Property Name="ivc_qty" Type="numeric" Precision="11" Scale="3" />
+          <Property Name="prod_count" Type="numeric" Precision="3" Scale="0" />
+          <Property Name="sample_yn" Type="nvarchar" MaxLength="1" />
+          <Property Name="acr_cus" Type="nvarchar" MaxLength="8" />
+          <Property Name="shp_base_amt" Type="numeric" Precision="14" Scale="2" />
+          <Property Name="rtn_base_amt" Type="numeric" Precision="14" Scale="2" />
+          <Property Name="contract_record" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityContainer Name="TESTModelStoreContainer">
+          <EntitySet Name="ordc_bah1" EntityType="Self.ordc_bah1" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ordc_bah1].[site] AS [site], 
+    [ordc_bah1].[ord_nbr] AS [ord_nbr], 
+    [ordc_bah1].[ord_date] AS [ord_date], 
+    [ordc_bah1].[ord_class] AS [ord_class], 
+    [ordc_bah1].[cus_id] AS [cus_id], 
+    [ordc_bah1].[dept_no] AS [dept_no], 
+    [ordc_bah1].[item_no] AS [item_no], 
+    [ordc_bah1].[item_name] AS [item_name], 
+    [ordc_bah1].[cus_item_no] AS [cus_item_no], 
+    [ordc_bah1].[item_statistic] AS [item_statistic], 
+    [ordc_bah1].[item_type] AS [item_type], 
+    [ordc_bah1].[salesman] AS [salesman], 
+    [ordc_bah1].[unit_price] AS [unit_price], 
+    [ordc_bah1].[ord_qty] AS [ord_qty], 
+    [ordc_bah1].[manual_qty] AS [manual_qty], 
+    [ordc_bah1].[ord_unit] AS [ord_unit], 
+    [ordc_bah1].[aux_qty] AS [aux_qty], 
+    [ordc_bah1].[aux_unit] AS [aux_unit], 
+    [ordc_bah1].[season_y] AS [season_y], 
+    [ordc_bah1].[season] AS [season], 
+    [ordc_bah1].[plan_fin_date] AS [plan_fin_date], 
+    [ordc_bah1].[vendor_id] AS [vendor_id], 
+    [ordc_bah1].[sam_nbr] AS [sam_nbr], 
+    [ordc_bah1].[sam_times] AS [sam_times], 
+    [ordc_bah1].[expand_yn] AS [expand_yn], 
+    [ordc_bah1].[agents] AS [agents], 
+    [ordc_bah1].[estimate_ie] AS [estimate_ie], 
+    [ordc_bah1].[actual_ie] AS [actual_ie], 
+    [ordc_bah1].[approved_ie] AS [approved_ie], 
+    [ordc_bah1].[trademark] AS [trademark], 
+    [ordc_bah1].[brand] AS [brand], 
+    [ordc_bah1].[ingredients] AS [ingredients], 
+    [ordc_bah1].[adv_amt] AS [adv_amt], 
+    [ordc_bah1].[bah_status] AS [bah_status], 
+    [ordc_bah1].[crp_yn] AS [crp_yn], 
+    [ordc_bah1].[close_reason] AS [close_reason], 
+    [ordc_bah1].[close_rmk] AS [close_rmk], 
+    [ordc_bah1].[filter_dept] AS [filter_dept], 
+    [ordc_bah1].[filter_creator] AS [filter_creator], 
+    [ordc_bah1].[creator] AS [creator], 
+    [ordc_bah1].[create_date] AS [create_date], 
+    [ordc_bah1].[modifier] AS [modifier], 
+    [ordc_bah1].[modify_date] AS [modify_date], 
+    [ordc_bah1].[est_gross_pcs] AS [est_gross_pcs], 
+    [ordc_bah1].[real_gross_pcs] AS [real_gross_pcs], 
+    [ordc_bah1].[expense_dozen] AS [expense_dozen], 
+    [ordc_bah1].[main_cost] AS [main_cost], 
+    [ordc_bah1].[sub_cost] AS [sub_cost], 
+    [ordc_bah1].[extra_expense] AS [extra_expense], 
+    [ordc_bah1].[ord_closer] AS [ord_closer], 
+    [ordc_bah1].[close_date] AS [close_date], 
+    [ordc_bah1].[crp_date] AS [crp_date], 
+    [ordc_bah1].[mps_yn] AS [mps_yn], 
+    [ordc_bah1].[mps_date] AS [mps_date], 
+    [ordc_bah1].[sub_yn] AS [sub_yn], 
+    [ordc_bah1].[sub_date] AS [sub_date], 
+    [ordc_bah1].[prod_nbr] AS [prod_nbr], 
+    [ordc_bah1].[price_main_yn] AS [price_main_yn], 
+    [ordc_bah1].[price_sub_yn] AS [price_sub_yn], 
+    [ordc_bah1].[rough_gross] AS [rough_gross], 
+    [ordc_bah1].[chn_yn] AS [chn_yn], 
+    [ordc_bah1].[chn_date] AS [chn_date], 
+    [ordc_bah1].[chn_turn_out] AS [chn_turn_out], 
+    [ordc_bah1].[chn_turn_date] AS [chn_turn_date], 
+    [ordc_bah1].[pre_nbr] AS [pre_nbr], 
+    [ordc_bah1].[pre_seq] AS [pre_seq]
+    FROM [dbo].[ordc_bah1] AS [ordc_bah1]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="ordc_bat" EntityType="Self.ordc_bat" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [ordc_bat].[site] AS [site], 
+    [ordc_bat].[ord_nbr] AS [ord_nbr], 
+    [ordc_bat].[ord_seq] AS [ord_seq], 
+    [ordc_bat].[cust_po_nbr] AS [cust_po_nbr], 
+    [ordc_bat].[season] AS [season], 
+    [ordc_bat].[item_number] AS [item_number], 
+    [ordc_bat].[hts] AS [hts], 
+    [ordc_bat].[pack] AS [pack], 
+    [ordc_bat].[sample_class] AS [sample_class], 
+    [ordc_bat].[get_term] AS [get_term], 
+    [ordc_bat].[transatn_term] AS [transatn_term], 
+    [ordc_bat].[last_place] AS [last_place], 
+    [ordc_bat].[deliver_id] AS [deliver_id], 
+    [ordc_bat].[forwarder] AS [forwarder], 
+    [ordc_bat].[quota_id] AS [quota_id], 
+    [ordc_bat].[unit_price] AS [unit_price], 
+    [ordc_bat].[pre_qty] AS [pre_qty], 
+    [ordc_bat].[real_price] AS [real_price], 
+    [ordc_bat].[add_reduce_item] AS [add_reduce_item], 
+    [ordc_bat].[real_qty] AS [real_qty], 
+    [ordc_bat].[ord_amt] AS [ord_amt], 
+    [ordc_bat].[ord_base_amt] AS [ord_base_amt], 
+    [ordc_bat].[shp_qty] AS [shp_qty], 
+    [ordc_bat].[shp_amt] AS [shp_amt], 
+    [ordc_bat].[rtn_qty] AS [rtn_qty], 
+    [ordc_bat].[rtn_amt] AS [rtn_amt], 
+    [ordc_bat].[wpk_qty] AS [wpk_qty], 
+    [ordc_bat].[shp_time] AS [shp_time], 
+    [ordc_bat].[add_export] AS [add_export], 
+    [ordc_bat].[reduce_export] AS [reduce_export], 
+    [ordc_bat].[cus_brokerage] AS [cus_brokerage], 
+    [ordc_bat].[cus_delivery_range] AS [cus_delivery_range], 
+    [ordc_bat].[cus_delivery_s] AS [cus_delivery_s], 
+    [ordc_bat].[cus_delivery_e] AS [cus_delivery_e], 
+    [ordc_bat].[finish_modify_date] AS [finish_modify_date], 
+    [ordc_bat].[qty_modify_date] AS [qty_modify_date], 
+    [ordc_bat].[cancel_yn] AS [cancel_yn], 
+    [ordc_bat].[cancel_date] AS [cancel_date], 
+    [ordc_bat].[plan_fin_date] AS [plan_fin_date], 
+    [ordc_bat].[finish_date] AS [finish_date], 
+    [ordc_bat].[last_date] AS [last_date], 
+    [ordc_bat].[confirm_date] AS [confirm_date], 
+    [ordc_bat].[color_price_yn] AS [color_price_yn], 
+    [ordc_bat].[bat_status] AS [bat_status], 
+    [ordc_bat].[close_date] AS [close_date], 
+    [ordc_bat].[reason] AS [reason], 
+    [ordc_bat].[filter_creator] AS [filter_creator], 
+    [ordc_bat].[filter_dept] AS [filter_dept], 
+    [ordc_bat].[creator] AS [creator], 
+    [ordc_bat].[create_date] AS [create_date], 
+    [ordc_bat].[modifier] AS [modifier], 
+    [ordc_bat].[modify_date] AS [modify_date], 
+    [ordc_bat].[po_type] AS [po_type], 
+    [ordc_bat].[est_gross_pcs] AS [est_gross_pcs], 
+    [ordc_bat].[real_gross_pcs] AS [real_gross_pcs], 
+    [ordc_bat].[main_cost] AS [main_cost], 
+    [ordc_bat].[sub_cost] AS [sub_cost], 
+    [ordc_bat].[first_shp_date] AS [first_shp_date], 
+    [ordc_bat].[last_shp_date] AS [last_shp_date], 
+    [ordc_bat].[ivc_qty] AS [ivc_qty], 
+    [ordc_bat].[prod_count] AS [prod_count], 
+    [ordc_bat].[sample_yn] AS [sample_yn], 
+    [ordc_bat].[acr_cus] AS [acr_cus], 
+    [ordc_bat].[shp_base_amt] AS [shp_base_amt], 
+    [ordc_bat].[rtn_base_amt] AS [rtn_base_amt], 
+    [ordc_bat].[contract_record] AS [contract_record]
+    FROM [dbo].[ordc_bat] AS [ordc_bat]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TESTModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ordc_bah1">
+          <Key>
+            <PropertyRef Name="site" />
+            <PropertyRef Name="ord_nbr" />
+          </Key>
+          <Property Name="site" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ord_nbr" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ord_date" Type="DateTime" Precision="3" />
+          <Property Name="ord_class" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="cus_id" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="dept_no" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="item_no" Type="String" MaxLength="38" FixedLength="false" Unicode="true" />
+          <Property Name="item_name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="cus_item_no" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="item_statistic" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="item_type" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="salesman" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="unit_price" Type="Decimal" Precision="15" Scale="5" />
+          <Property Name="ord_qty" Type="Decimal" Precision="11" Scale="3" />
+          <Property Name="manual_qty" Type="Decimal" Precision="11" Scale="3" />
+          <Property Name="ord_unit" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="aux_qty" Type="Decimal" Precision="11" Scale="3" />
+          <Property Name="aux_unit" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="season_y" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="season" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="plan_fin_date" Type="DateTime" Precision="3" />
+          <Property Name="vendor_id" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="sam_nbr" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="sam_times" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="expand_yn" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="agents" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="estimate_ie" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="actual_ie" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="approved_ie" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="trademark" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="brand" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="ingredients" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="adv_amt" Type="Decimal" Precision="12" Scale="3" />
+          <Property Name="bah_status" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="crp_yn" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="close_reason" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="close_rmk" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="filter_dept" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="filter_creator" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="creator" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="create_date" Type="DateTime" Precision="3" />
+          <Property Name="modifier" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="modify_date" Type="DateTime" Precision="3" />
+          <Property Name="est_gross_pcs" Type="Decimal" Precision="11" Scale="2" />
+          <Property Name="real_gross_pcs" Type="Decimal" Precision="11" Scale="2" />
+          <Property Name="expense_dozen" Type="Decimal" Precision="11" Scale="2" />
+          <Property Name="main_cost" Type="Decimal" Precision="11" Scale="2" />
+          <Property Name="sub_cost" Type="Decimal" Precision="11" Scale="2" />
+          <Property Name="extra_expense" Type="Decimal" Precision="11" Scale="2" />
+          <Property Name="ord_closer" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="close_date" Type="DateTime" Precision="3" />
+          <Property Name="crp_date" Type="DateTime" Precision="3" />
+          <Property Name="mps_yn" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="mps_date" Type="DateTime" Precision="3" />
+          <Property Name="sub_yn" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="sub_date" Type="DateTime" Precision="3" />
+          <Property Name="prod_nbr" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="price_main_yn" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="price_sub_yn" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="rough_gross" Type="Decimal" Precision="11" Scale="2" />
+          <Property Name="chn_yn" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="chn_date" Type="DateTime" Precision="3" />
+          <Property Name="chn_turn_out" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="chn_turn_date" Type="DateTime" Precision="3" />
+          <Property Name="pre_nbr" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="pre_seq" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ordc_bat">
+          <Key>
+            <PropertyRef Name="site" />
+            <PropertyRef Name="ord_nbr" />
+            <PropertyRef Name="ord_seq" />
+          </Key>
+          <Property Name="site" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ord_nbr" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ord_seq" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cust_po_nbr" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="season" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="item_number" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="hts" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="pack" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+          <Property Name="sample_class" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="get_term" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="transatn_term" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="last_place" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="deliver_id" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="forwarder" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="quota_id" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="unit_price" Type="Decimal" Precision="15" Scale="5" />
+          <Property Name="pre_qty" Type="Decimal" Precision="11" Scale="3" />
+          <Property Name="real_price" Type="Decimal" Precision="15" Scale="5" />
+          <Property Name="add_reduce_item" Type="Decimal" Precision="12" Scale="4" />
+          <Property Name="real_qty" Type="Decimal" Precision="11" Scale="3" />
+          <Property Name="ord_amt" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="ord_base_amt" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="shp_qty" Type="Decimal" Precision="11" Scale="3" />
+          <Property Name="shp_amt" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="rtn_qty" Type="Decimal" Precision="11" Scale="3" />
+          <Property Name="rtn_amt" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="wpk_qty" Type="Decimal" Precision="11" Scale="3" />
+          <Property Name="shp_time" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="add_export" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="reduce_export" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="cus_brokerage" Type="Decimal" Precision="5" Scale="2" />
+          <Property Name="cus_delivery_range" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="cus_delivery_s" Type="DateTime" Precision="3" />
+          <Property Name="cus_delivery_e" Type="DateTime" Precision="3" />
+          <Property Name="finish_modify_date" Type="DateTime" Precision="3" />
+          <Property Name="qty_modify_date" Type="DateTime" Precision="3" />
+          <Property Name="cancel_yn" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="cancel_date" Type="DateTime" Precision="3" />
+          <Property Name="plan_fin_date" Type="DateTime" Precision="3" />
+          <Property Name="finish_date" Type="DateTime" Precision="3" />
+          <Property Name="last_date" Type="DateTime" Precision="3" />
+          <Property Name="confirm_date" Type="DateTime" Precision="3" />
+          <Property Name="color_price_yn" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="bat_status" Type="String" MaxLength="2" FixedLength="false" Unicode="true" />
+          <Property Name="close_date" Type="DateTime" Precision="3" />
+          <Property Name="reason" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="filter_creator" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="filter_dept" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+          <Property Name="creator" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="create_date" Type="DateTime" Precision="3" />
+          <Property Name="modifier" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="modify_date" Type="DateTime" Precision="3" />
+          <Property Name="po_type" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="est_gross_pcs" Type="Decimal" Precision="11" Scale="2" />
+          <Property Name="real_gross_pcs" Type="Decimal" Precision="11" Scale="2" />
+          <Property Name="main_cost" Type="Decimal" Precision="11" Scale="2" />
+          <Property Name="sub_cost" Type="Decimal" Precision="11" Scale="2" />
+          <Property Name="first_shp_date" Type="DateTime" Precision="3" />
+          <Property Name="last_shp_date" Type="DateTime" Precision="3" />
+          <Property Name="ivc_qty" Type="Decimal" Precision="11" Scale="3" />
+          <Property Name="prod_count" Type="Decimal" Precision="3" Scale="0" />
+          <Property Name="sample_yn" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+          <Property Name="acr_cus" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="shp_base_amt" Type="Decimal" Precision="14" Scale="2" />
+          <Property Name="rtn_base_amt" Type="Decimal" Precision="14" Scale="2" />
+          <Property Name="contract_record" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="TESTEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ordc_bah1" EntityType="Self.ordc_bah1" />
+          <EntitySet Name="ordc_bat" EntityType="Self.ordc_bat" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TESTModelStoreContainer" CdmEntityContainer="TESTEntities">
+          <EntitySetMapping Name="ordc_bah1">
+            <EntityTypeMapping TypeName="TESTModel.ordc_bah1">
+              <MappingFragment StoreEntitySet="ordc_bah1">
+                <ScalarProperty Name="site" ColumnName="site" />
+                <ScalarProperty Name="ord_nbr" ColumnName="ord_nbr" />
+                <ScalarProperty Name="ord_date" ColumnName="ord_date" />
+                <ScalarProperty Name="ord_class" ColumnName="ord_class" />
+                <ScalarProperty Name="cus_id" ColumnName="cus_id" />
+                <ScalarProperty Name="dept_no" ColumnName="dept_no" />
+                <ScalarProperty Name="item_no" ColumnName="item_no" />
+                <ScalarProperty Name="item_name" ColumnName="item_name" />
+                <ScalarProperty Name="cus_item_no" ColumnName="cus_item_no" />
+                <ScalarProperty Name="item_statistic" ColumnName="item_statistic" />
+                <ScalarProperty Name="item_type" ColumnName="item_type" />
+                <ScalarProperty Name="salesman" ColumnName="salesman" />
+                <ScalarProperty Name="unit_price" ColumnName="unit_price" />
+                <ScalarProperty Name="ord_qty" ColumnName="ord_qty" />
+                <ScalarProperty Name="manual_qty" ColumnName="manual_qty" />
+                <ScalarProperty Name="ord_unit" ColumnName="ord_unit" />
+                <ScalarProperty Name="aux_qty" ColumnName="aux_qty" />
+                <ScalarProperty Name="aux_unit" ColumnName="aux_unit" />
+                <ScalarProperty Name="season_y" ColumnName="season_y" />
+                <ScalarProperty Name="season" ColumnName="season" />
+                <ScalarProperty Name="plan_fin_date" ColumnName="plan_fin_date" />
+                <ScalarProperty Name="vendor_id" ColumnName="vendor_id" />
+                <ScalarProperty Name="sam_nbr" ColumnName="sam_nbr" />
+                <ScalarProperty Name="sam_times" ColumnName="sam_times" />
+                <ScalarProperty Name="expand_yn" ColumnName="expand_yn" />
+                <ScalarProperty Name="agents" ColumnName="agents" />
+                <ScalarProperty Name="estimate_ie" ColumnName="estimate_ie" />
+                <ScalarProperty Name="actual_ie" ColumnName="actual_ie" />
+                <ScalarProperty Name="approved_ie" ColumnName="approved_ie" />
+                <ScalarProperty Name="trademark" ColumnName="trademark" />
+                <ScalarProperty Name="brand" ColumnName="brand" />
+                <ScalarProperty Name="ingredients" ColumnName="ingredients" />
+                <ScalarProperty Name="adv_amt" ColumnName="adv_amt" />
+                <ScalarProperty Name="bah_status" ColumnName="bah_status" />
+                <ScalarProperty Name="crp_yn" ColumnName="crp_yn" />
+                <ScalarProperty Name="close_reason" ColumnName="close_reason" />
+                <ScalarProperty Name="close_rmk" ColumnName="close_rmk" />
+                <ScalarProperty Name="filter_dept" ColumnName="filter_dept" />
+                <ScalarProperty Name="filter_creator" ColumnName="filter_creator" />
+                <ScalarProperty Name="creator" ColumnName="creator" />
+                <ScalarProperty Name="create_date" ColumnName="create_date" />
+                <ScalarProperty Name="modifier" ColumnName="modifier" />
+                <ScalarProperty Name="modify_date" ColumnName="modify_date" />
+                <ScalarProperty Name="est_gross_pcs" ColumnName="est_gross_pcs" />
+                <ScalarProperty Name="real_gross_pcs" ColumnName="real_gross_pcs" />
+                <ScalarProperty Name="expense_dozen" ColumnName="expense_dozen" />
+                <ScalarProperty Name="main_cost" ColumnName="main_cost" />
+                <ScalarProperty Name="sub_cost" ColumnName="sub_cost" />
+                <ScalarProperty Name="extra_expense" ColumnName="extra_expense" />
+                <ScalarProperty Name="ord_closer" ColumnName="ord_closer" />
+                <ScalarProperty Name="close_date" ColumnName="close_date" />
+                <ScalarProperty Name="crp_date" ColumnName="crp_date" />
+                <ScalarProperty Name="mps_yn" ColumnName="mps_yn" />
+                <ScalarProperty Name="mps_date" ColumnName="mps_date" />
+                <ScalarProperty Name="sub_yn" ColumnName="sub_yn" />
+                <ScalarProperty Name="sub_date" ColumnName="sub_date" />
+                <ScalarProperty Name="prod_nbr" ColumnName="prod_nbr" />
+                <ScalarProperty Name="price_main_yn" ColumnName="price_main_yn" />
+                <ScalarProperty Name="price_sub_yn" ColumnName="price_sub_yn" />
+                <ScalarProperty Name="rough_gross" ColumnName="rough_gross" />
+                <ScalarProperty Name="chn_yn" ColumnName="chn_yn" />
+                <ScalarProperty Name="chn_date" ColumnName="chn_date" />
+                <ScalarProperty Name="chn_turn_out" ColumnName="chn_turn_out" />
+                <ScalarProperty Name="chn_turn_date" ColumnName="chn_turn_date" />
+                <ScalarProperty Name="pre_nbr" ColumnName="pre_nbr" />
+                <ScalarProperty Name="pre_seq" ColumnName="pre_seq" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ordc_bat">
+            <EntityTypeMapping TypeName="TESTModel.ordc_bat">
+              <MappingFragment StoreEntitySet="ordc_bat">
+                <ScalarProperty Name="site" ColumnName="site" />
+                <ScalarProperty Name="ord_nbr" ColumnName="ord_nbr" />
+                <ScalarProperty Name="ord_seq" ColumnName="ord_seq" />
+                <ScalarProperty Name="cust_po_nbr" ColumnName="cust_po_nbr" />
+                <ScalarProperty Name="season" ColumnName="season" />
+                <ScalarProperty Name="item_number" ColumnName="item_number" />
+                <ScalarProperty Name="hts" ColumnName="hts" />
+                <ScalarProperty Name="pack" ColumnName="pack" />
+                <ScalarProperty Name="sample_class" ColumnName="sample_class" />
+                <ScalarProperty Name="get_term" ColumnName="get_term" />
+                <ScalarProperty Name="transatn_term" ColumnName="transatn_term" />
+                <ScalarProperty Name="last_place" ColumnName="last_place" />
+                <ScalarProperty Name="deliver_id" ColumnName="deliver_id" />
+                <ScalarProperty Name="forwarder" ColumnName="forwarder" />
+                <ScalarProperty Name="quota_id" ColumnName="quota_id" />
+                <ScalarProperty Name="unit_price" ColumnName="unit_price" />
+                <ScalarProperty Name="pre_qty" ColumnName="pre_qty" />
+                <ScalarProperty Name="real_price" ColumnName="real_price" />
+                <ScalarProperty Name="add_reduce_item" ColumnName="add_reduce_item" />
+                <ScalarProperty Name="real_qty" ColumnName="real_qty" />
+                <ScalarProperty Name="ord_amt" ColumnName="ord_amt" />
+                <ScalarProperty Name="ord_base_amt" ColumnName="ord_base_amt" />
+                <ScalarProperty Name="shp_qty" ColumnName="shp_qty" />
+                <ScalarProperty Name="shp_amt" ColumnName="shp_amt" />
+                <ScalarProperty Name="rtn_qty" ColumnName="rtn_qty" />
+                <ScalarProperty Name="rtn_amt" ColumnName="rtn_amt" />
+                <ScalarProperty Name="wpk_qty" ColumnName="wpk_qty" />
+                <ScalarProperty Name="shp_time" ColumnName="shp_time" />
+                <ScalarProperty Name="add_export" ColumnName="add_export" />
+                <ScalarProperty Name="reduce_export" ColumnName="reduce_export" />
+                <ScalarProperty Name="cus_brokerage" ColumnName="cus_brokerage" />
+                <ScalarProperty Name="cus_delivery_range" ColumnName="cus_delivery_range" />
+                <ScalarProperty Name="cus_delivery_s" ColumnName="cus_delivery_s" />
+                <ScalarProperty Name="cus_delivery_e" ColumnName="cus_delivery_e" />
+                <ScalarProperty Name="finish_modify_date" ColumnName="finish_modify_date" />
+                <ScalarProperty Name="qty_modify_date" ColumnName="qty_modify_date" />
+                <ScalarProperty Name="cancel_yn" ColumnName="cancel_yn" />
+                <ScalarProperty Name="cancel_date" ColumnName="cancel_date" />
+                <ScalarProperty Name="plan_fin_date" ColumnName="plan_fin_date" />
+                <ScalarProperty Name="finish_date" ColumnName="finish_date" />
+                <ScalarProperty Name="last_date" ColumnName="last_date" />
+                <ScalarProperty Name="confirm_date" ColumnName="confirm_date" />
+                <ScalarProperty Name="color_price_yn" ColumnName="color_price_yn" />
+                <ScalarProperty Name="bat_status" ColumnName="bat_status" />
+                <ScalarProperty Name="close_date" ColumnName="close_date" />
+                <ScalarProperty Name="reason" ColumnName="reason" />
+                <ScalarProperty Name="filter_creator" ColumnName="filter_creator" />
+                <ScalarProperty Name="filter_dept" ColumnName="filter_dept" />
+                <ScalarProperty Name="creator" ColumnName="creator" />
+                <ScalarProperty Name="create_date" ColumnName="create_date" />
+                <ScalarProperty Name="modifier" ColumnName="modifier" />
+                <ScalarProperty Name="modify_date" ColumnName="modify_date" />
+                <ScalarProperty Name="po_type" ColumnName="po_type" />
+                <ScalarProperty Name="est_gross_pcs" ColumnName="est_gross_pcs" />
+                <ScalarProperty Name="real_gross_pcs" ColumnName="real_gross_pcs" />
+                <ScalarProperty Name="main_cost" ColumnName="main_cost" />
+                <ScalarProperty Name="sub_cost" ColumnName="sub_cost" />
+                <ScalarProperty Name="first_shp_date" ColumnName="first_shp_date" />
+                <ScalarProperty Name="last_shp_date" ColumnName="last_shp_date" />
+                <ScalarProperty Name="ivc_qty" ColumnName="ivc_qty" />
+                <ScalarProperty Name="prod_count" ColumnName="prod_count" />
+                <ScalarProperty Name="sample_yn" ColumnName="sample_yn" />
+                <ScalarProperty Name="acr_cus" ColumnName="acr_cus" />
+                <ScalarProperty Name="shp_base_amt" ColumnName="shp_base_amt" />
+                <ScalarProperty Name="rtn_base_amt" ColumnName="rtn_base_amt" />
+                <ScalarProperty Name="contract_record" ColumnName="contract_record" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

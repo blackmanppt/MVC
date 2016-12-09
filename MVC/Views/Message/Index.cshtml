@@ -1,0 +1,24 @@
+﻿@model IEnumerable<MVC.Models.ordc_bah1>
+    @{ 
+        ViewBag.Title = "Index";
+    }
+<div>
+    @if(Model !=null)
+    {
+        <table>
+            <tbody>
+                @foreach(var ordc_bah1 in Model)
+                {
+                    <tr>
+                        <td>狀態:</td>
+                        <td>@ordc_bah1.bah_status</td>
+                    </tr>
+                    <tr>
+                        <td>狀態:</td>
+                        <td>@ordc_bah1.bah_status</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>
